@@ -46,29 +46,12 @@
     </style>
 </head>
 <body>
-    <form action="index.html" method="POST">
+    <form action="index.php" method="POST">
         <h1>LOGIN</h1>
         <input type="text" name="username" class="user" placeholder="enter username"><br>
         <input type="text" name="password" class="psswd" placeholder="enter your password"><br>
         <input type="submit" name="submit" class="btn">
     </form>
-        <?php
-            include('db.php');
-            if(isset($_POST['submit']))
-            {
-                $n = $_POST['username'];
-                $c = $_POST['password'];
-                $r = mysqli_query($con,"INSERT INTO travel2 (username,password) VALUES('$n','$c')");
-                if($r)
-                {
-                    echo "done";
-                }
-                else
-                {
-                    echo "undone";
-                }
-            }
-
-        ?>
+       
 </body>
 </html>
