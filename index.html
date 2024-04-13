@@ -1,3 +1,22 @@
+ <?php
+            include('db.php');
+            if(isset($_POST['submit']))
+            {
+                $n = $_POST['username'];
+                $c = $_POST['password'];
+                $r = mysqli_query($con,"INSERT INTO travel2 (username,password) VALUES('$n','$c')");
+                if($r)
+                {
+                    echo "done";
+                }
+                else
+                {
+                    echo "undone";
+                }
+            }
+
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
